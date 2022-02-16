@@ -17,6 +17,7 @@
     <td>{{ product.expiryDate }}</td>
   </tr>
 </table> -->
+<div style="background-color:mediumseagreen">
 <div *ngFor="let product of products">
   <!-- Property is Binding.....-->
   <a [title]="product.productName + 'details'">
@@ -27,11 +28,10 @@
 
   <!--Event Binding..... -->
 
-  <button type="button" (click)="share()">share</button>
+  <button style="background-color:green" type="button" (click)="share()">share</button>
   &nbsp;
-  <button type="button" (click)="buy()">buy</button>
+  <button style="background-color:red " type="button" (click)="buy()">buy</button>
   &nbsp;
-  <button type="button" (click)="start()">start</button>
   <app-product-alter [productInside] = "product" (notify)="onNotify()">
     &nbsp;
   </app-product-alter>

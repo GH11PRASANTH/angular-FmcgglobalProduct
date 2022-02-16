@@ -1,7 +1,7 @@
 
 export interface Product
  {
-  productId: number,
+  productId: String,
   productName : String,
   price: number,
   availableQuantity:number,
@@ -22,5 +22,12 @@ export const productsFromFile = [
         price: 1500.0,
         availableQuantity : 2,
         expiryDate : '2034-03-12'
+    },
+    {
+        productId : 'P003',
+        productName : 'Mobile',
+        price: 5000.0,
+        availableQuantity : 2,
+        expiryDate : '2021-03-12'
     }
 ]
