@@ -1,17 +1,46 @@
 <div style="background-color:lightblack">
   <h2>Welcome to Fmcgglobal Products</h2>
 </div>
-
 <table border="2px" style="width:500px">
   <tr>
-    <th>Product ID</th>
+    <th>Product_ID</th>
     <th>Name</th>
-    <th>Product Price</th>
+    <th>Product_Price</th>
+    <th>availableQuantity</th>
+    <th>expiryDate</th>
   </tr>
   <tr *ngFor="let product of products">
     <td>{{ product.productId }}</td>
     <td>{{ product.productName }}</td>
     <td>{{ product.price }}</td>
-    <td>{{ product.quantity }}</td>
+    <td>{{ product.availableQuantity }}</td>
+    <td>{{product.expiryDate}}</td>
   </tr>
 </table>
+<div *ngFor="let product of products">
+  <!-- Property is Binding.....-->
+<a [title1]="product.name + 'details'">
+  <!-- String interpolation (data Binding...) -->
+  {{product.name}}
+</a>
+<!-- Structural directive...-->
+
+
+<!--Event Binding..... -->
+
+<button type="button" (click)="share()">
+share
+</button>
+&nbsp;
+<button type="button" (click)="buy()">
+  buy
+</button>
+&nbsp;
+<button type="butten" (click)="start()">
+  start
+</button>
+<app-product-alter  [productInside]="product" (notify)="onNotify()">
+  &nbsp;
+</app-product-alter>
+</div>
+

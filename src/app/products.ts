@@ -1,11 +1,11 @@
 
 export interface Product
  {
-   productId: number;
-    productName: string;
-    price: number;
-    availableQuantity: number;
-    expiryDate:Date;
+  "productId": number,
+  "productName": "string",
+  "price": number,
+  "availableQuantity":number,
+  "expiryDate": "String"
   }
 
 export const productsFromFile = [
