@@ -1,4 +1,4 @@
-<p *ngIf="productInside && Product_Price > 700 ">
+<p *ngIf="productInside && productInside.price > 700 ">
   <button type="button" (click)="notify.emit()">
     motify Me
   </button>

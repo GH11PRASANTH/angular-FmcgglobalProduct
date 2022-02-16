@@ -1,4 +1,4 @@
-<div style="background-color:lightblack">
+<!-- <div style="background-color:lightblack">
   <h2>Welcome to Fmcgglobal Products</h2>
 </div>
 <table border="2px" style="width:500px">
@@ -14,33 +14,25 @@
     <td>{{ product.productName }}</td>
     <td>{{ product.price }}</td>
     <td>{{ product.availableQuantity }}</td>
-    <td>{{product.expiryDate}}</td>
+    <td>{{ product.expiryDate }}</td>
   </tr>
-</table>
+</table> -->
 <div *ngFor="let product of products">
   <!-- Property is Binding.....-->
-<a [title1]="product.name + 'details'">
-  <!-- String interpolation (data Binding...) -->
-  {{product.name}}
-</a>
-<!-- Structural directive...-->
+  <a [title]="product.productName + 'details'">
+    <!-- String interpolation (data Binding...) -->
+    {{ product.productName }}
+  </a>
+  <!-- Structural directive...-->
 
+  <!--Event Binding..... -->
 
-<!--Event Binding..... -->
-
-<button type="button" (click)="share()">
-share
-</button>
-&nbsp;
-<button type="button" (click)="buy()">
-  buy
-</button>
-&nbsp;
-<button type="butten" (click)="start()">
-  start
-</button>
-<app-product-alter  [productInside]="product" (notify)="onNotify()">
+  <button type="button" (click)="share()">share</button>
   &nbsp;
-</app-product-alter>
+  <button type="button" (click)="buy()">buy</button>
+  &nbsp;
+  <button type="button" (click)="start()">start</button>
+  <app-product-alter [productInside]="product" (notify)="onNotify()">
+    &nbsp;
+  </app-product-alter>
 </div>
-
