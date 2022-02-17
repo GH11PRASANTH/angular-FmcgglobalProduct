@@ -29,13 +29,15 @@
     <!-- String interpolation data Binding...  -->
     {{ product.productId }}
   </a>
-   
+   &nbsp;
   <a [title]="product.price + 'details'">
      {{product.price}}
   </a>
+  &nbsp;
   <a [title] ="product.availableQuantity + 'details'">
   {{product.availableQuantity}}
 </a>
+&nbsp;
 <a [title] ="product.expiryDate + 'details'">
   {{product.expiryDate}}
 </a>
@@ -43,10 +45,16 @@
 
   <!--Event Binding..... -->
   &nbsp;
+  <br/>
+  <br/>
   <button style="background-color:green" type="button" (click)="share()">share</button>
+  <br/>
+  <br/>
   &nbsp;
   <button style="background-color:red " type="button" (click)="buy()">buy</button>
   &nbsp;
+  <br/>
+  <br/>
   <app-product-alter [productInside] = "product" (notify)="onNotify()">
     &nbsp;
   </app-product-alter>
