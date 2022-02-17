@@ -21,13 +21,28 @@
 <div *ngFor="let product of products">
   <!-- Property is Binding.....-->
   <a [title]="product.productName + 'details'">
-    <!-- String interpolation (data Binding...) -->
     {{ product.productName }}
   </a>
+  &nbsp;
+
+    <a [title]="product.productId + 'details'">
+    <!-- String interpolation data Binding...  -->
+    {{ product.productId }}
+  </a>
+   
+  <a [title]="product.price + 'details'">
+     {{product.price}}
+  </a>
+  <a [title] ="product.availableQuantity + 'details'">
+  {{product.availableQuantity}}
+</a>
+<a [title] ="product.expiryDate + 'details'">
+  {{product.expiryDate}}
+</a>
   <!-- Structural directive...-->
 
   <!--Event Binding..... -->
-
+  &nbsp;
   <button style="background-color:green" type="button" (click)="share()">share</button>
   &nbsp;
   <button style="background-color:red " type="button" (click)="buy()">buy</button>
