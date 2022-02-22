@@ -12,10 +12,13 @@ import { ProductAlterComponent } from './product-alter/product-alter.component';
 @NgModule({
   imports:      [ BrowserModule, FormsModule,
   RouterModule.forRoot([
-    {path:'', component:ProductListComponent}
+    {path:'', component:ProductListComponent},
+    { path: 'products/:productId', component: ProductAlterComponent },
   ]) 
 ],
-  declarations: [ AppComponent, HelloComponent, TopBarComponent, ProductListComponent ,ProductAlterComponent],
+  declarations: [ AppComponent, HelloComponent, TopBarComponent, ProductListComponent ,ProductAlterComponent
+  , ProductAlterComponent
+  ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
